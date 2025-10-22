@@ -135,11 +135,12 @@
       <div class="brand">
         <div class="logo">CPU</div>
         <div>
-          <h1 class="site-title">Mengenal CPU: Otak Cerdas di Balik Komputer Anda</h1>
+          <h1 class="site-title">Mengenal CPU: Otak Cerdas di Balik Komputer</h1>
           <div class="meta">Dipublikasikan: 22 Okt 2025 • Label: Intel, AMD, CPU, Qualcomm</div>
         </div>
       </div>
       <nav aria-label="navigasi-utama">
+        <a href="#sejarah">Sejarah</a>
         <a href="#fungsi">Fungsi</a>
         <a href="#kategori">Kategori</a>
         <a href="#kesimpulan">Kesimpulan</a>
@@ -169,6 +170,52 @@
           <p><strong>3. Execute (Mengeksekusi):</strong> CPU menjalankan perintah tersebut. Ini bisa berupa perhitungan matematika sederhana (seperti 2+2) atau perintah yang lebih kompleks (seperti memuat gambar).</p>
 
           <p>Ketiga langkah ini terjadi jutaan, bahkan miliaran, kali setiap detiknya!</p>
+
+          <h3 id="sejarah">Sejarah Perkembangan CPU dari Generasi ke Generasi</h3>
+          <p>CPU telah berkembang pesat sejak kemunculan pertamanya pada tahun 1940-an. Pada masa itu, CPU belum berbentuk chip seperti sekarang, melainkan menggunakan tabung vakum raksasa yang memakan banyak daya dan tempat. Berikut tahapan utamanya:</p>
+          <ul>
+            <li><strong>Generasi 1 (1940–1950):</strong> Menggunakan tabung vakum. Contoh: komputer ENIAC.</li>
+            <li><strong>Generasi 2 (1950–1960):</strong> Transistor menggantikan tabung vakum — lebih kecil dan efisien.</li>
+            <li><strong>Generasi 3 (1960–1970):</strong> Penggunaan IC (Integrated Circuit), yang memungkinkan banyak transistor dalam satu chip.</li>
+            <li><strong>Generasi 4 (1970–sekarang):</strong> Mikroprosesor — seluruh CPU berada dalam satu chip silikon. Intel 4004 (1971) dianggap sebagai CPU mikro pertama di dunia.</li>
+            <li><strong>Era Modern:</strong> CPU kini memiliki miliaran transistor dan teknologi nanometer (3nm hingga 7nm), memungkinkan performa tinggi dengan konsumsi daya rendah.</li>
+          </ul>
+
+          <div class="separator">
+            <img src="4004.png" alt="Intel 4004" style="max-width:220px;border-radius:8px;">
+            <div style="margin-top:6px;color:var(--muted)">Intel 4004 — mikroprosesor pertama (1971)</div>
+          </div>
+
+          <h3 id="multithreading">Cara Kerja Multi-Threading dan Hyper-Threading</h3>
+          <p>Setiap inti CPU mampu menjalankan satu aliran tugas (thread) dalam satu waktu. Teknologi <strong>multi-threading</strong> memungkinkan satu inti menjalankan lebih dari satu thread secara bersamaan dengan memanfaatkan waktu idle CPU.</p>
+          <p><strong>Hyper-Threading</strong> adalah implementasi milik Intel yang memungkinkan satu inti fisik diperlakukan seperti dua inti logis. Ini meningkatkan efisiensi pemrosesan, terutama saat menjalankan aplikasi multitasking atau rendering.</p>
+          <p>Misalnya, CPU 4 core dengan Hyper-Threading dapat menangani hingga 8 thread sekaligus. Namun, peningkatan performa biasanya tidak 2× lipat, melainkan sekitar 20–40% tergantung jenis pekerjaan.</p>
+
+          <div class="feature">
+            <h4>Keuntungan Multi-Threading</h4>
+            <ul style="margin:0 0 0 18px">
+              <li>Meningkatkan efisiensi multitasking.</li>
+              <li>Waktu rendering dan kompilasi lebih cepat.</li>
+              <li>Performa gaming dan editing lebih stabil.</li>
+            </ul>
+          </div>
+
+          <h3 id="cpuvsgpu">Perbedaan CPU dan GPU</h3>
+          <p>Sering kali CPU dan GPU disamakan karena keduanya merupakan prosesor. Namun, keduanya memiliki fungsi yang sangat berbeda:</p>
+          <table style="width:100%;margin-top:10px;border-collapse:collapse;font-size:14px;color:var(--muted)">
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+              <th style="text-align:left;padding:8px;color:#fff">Aspek</th>
+              <th style="text-align:left;padding:8px;color:#fff">CPU</th>
+              <th style="text-align:left;padding:8px;color:#fff">GPU</th>
+            </tr>
+            <tr><td style="padding:8px">Fungsi Utama</td><td style="padding:8px">Menangani beragam tugas umum dan logika kompleks.</td><td style="padding:8px">Memproses data grafis secara paralel.</td></tr>
+            <tr><td style="padding:8px">Struktur Core</td><td style="padding:8px">Sedikit core (4–16) tapi sangat kuat per core.</td><td style="padding:8px">Ratusan hingga ribuan core kecil.</td></tr>
+            <tr><td style="padding:8px">Contoh Penggunaan</td><td style="padding:8px">Sistem operasi, aplikasi kantor, logika program.</td><td style="padding:8px">Rendering 3D, AI, machine learning, game.</td></tr>
+          </table>
+
+          <div class="separator">
+            <img src="cpugpu.png" alt="Perbedaan CPU dan GPU" style="max-width:100%;border-radius:8px;">
+          </div>
 
           <h3>Komponen Inti di Dalam CPU</h3>
           <p>Meskipun terlihat seperti satu kepingan tunggal, di dalam CPU terdapat beberapa bagian penting yang bekerja sama:</p>
@@ -244,16 +291,14 @@
             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMWqE7YW8Ck9gcl5eQMbR_76wpiHpYoiLYL1cxm3HZW93V8l4QW6Gtx55C9EOOmnqnOWwK0PTTZ6CDWXEqpqlqWe4eb_AV_a97gm_p6jWVWgCRmXoV_w7FR1h4eeXrQvINP_s8L_ON77NpKE0vUyL2VD4ALqQNy2kqs0Ia6Bl0hl-lqlV2Gmy1cEACXHY/s320/1000142163.png" alt="Chip mobile" style="max-width:220px;height:auto;border-radius:8px;"/>
           </div>
 
+
           <h3 id="kesimpulan">Kesimpulan</h3>
           <p>CPU mungkin kecil, tetapi perannya sangat besar. Ia adalah mesin penggerak yang menjalankan setiap perintah, perhitungan, dan program di komputer Anda. Tanpa CPU, komputer hanyalah sekumpulan komponen elektronik yang tidak berguna.</p>
           <p>Dengan memahami apa itu CPU, bagaimana ia bekerja, dan apa yang membuatnya cepat (Clock Speed dan Cores), serta melihat contoh-contoh seperti seri Intel Core atau AMD Ryzen, Anda selangkah lebih dekat untuk benar-benar mengerti teknologi yang Anda gunakan setiap hari.</p>
         </div>
 
         <footer>
-          <div class="muted">Butuh versi cetak, tema terang, atau optimasi khusus untuk blogspot? Katakan spesifikasinya — saya perbarui langsung.</div>
-        </footer>
-      </article>
-
+          &copy; 2025 Mengenal CPU. Semua hak dilindungi.
       <aside class="card" aria-label="ringkasan-spesifikasi">
         <h3>Ringkasan Cepat</h3>
         <div class="specs">
@@ -289,4 +334,3 @@
   </script>
 </body>
 </html>
-
